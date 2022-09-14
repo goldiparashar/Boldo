@@ -160,6 +160,9 @@ input[type="text"]:focus-visible {
 .align-right {
     text-align: right;
 }
+.align-left {
+    text-align: left !important;
+}
 figure {
     margin: 0;
     line-height: 1;
@@ -864,7 +867,7 @@ border:transparent;
     position: absolute;
     content: "";
     bottom: 0;
-    width: 1200px;
+    max-width: 1200px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -938,7 +941,7 @@ justify-content: flex-start;
 }
 @media(max-width: 991px) {
     .banner-sec, .inner-sec {
-        text-align: center;
+        text-align: center !important;
     }
     .inner-sec .connect-our-cust-img {
         text-align: center;
@@ -952,9 +955,9 @@ justify-content: flex-start;
     .feature-wrapper .inner-sec .btn {
         width: 100%;
     }
-    .col-6 {
+   /* .col-6 {
         width: 100% !important;
-    }
+    }*/
     .connect-our-cust {
         margin-top: 60px;
     }
@@ -981,8 +984,19 @@ justify-content: flex-start;
         line-height: 48px;
     }
     .banner-sec.pg-blog .test-description {
-    justify-content: center;
-}
+        justify-content: center;
+    }
+    .pg-services .banner-left, .pg-services .banner-right {
+        max-width: 100%;
+        text-align: center;
+    }
+    .test-description-info h5 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .test-description-info p {
+        font-size: 18px;
+    }
 }
 @media(max-width: 767px) {
 h2 {
@@ -1008,6 +1022,10 @@ footer li {
     line-height: 30px;
     font-size:18px;
 }
+.footer-left {
+    width: 40%;
+    max-width: 100%;
+}
 .sec-padding {
     padding: 52px 0;
 }
@@ -1028,9 +1046,40 @@ footer li {
         border: transparent;
     }
     header {
-    position: fixed;
-    background-color: #05273f;
-}
+        position: fixed;
+        background-color: #05273f;
+    }
+    .service-page header {
+        position: fixed;
+        background-color: #59e3a7;
+    }
+    .service-page .menu-icon {
+        color: #042135;
+    }
+    section.pg-services {
+        text-align: center;
+    }
+    .service-page .test-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .service-page .navbar-collapse.collapse {
+        background-color: #4ae2ab;
+    }
+    #blog-page .navbar img {
+        filter: brightness(80.5);
+    }
+    #blog-page a.nav-link {
+        color: #fff;
+    }
+    .pg-blog{
+        text-align: center;
+    }
+    .latest-news .inner-sec {
+        max-width: 300px;
+        margin: 0 auto;
+    }
     .navbar-collapse.collapse {
     background-color: #05273f;
     height: calc(100vh - 106px);
@@ -1098,9 +1147,9 @@ footer li {
         margin-top: 24px;
     }
     .our-value .inner-sec img{
-        width: 100px;
+        width: 150px;
         max-width: unset;
-        height: 100px;
+        height: 150px;
         border-radius: 20px;
         margin-right: 20px;
         object-fit: cover;
